@@ -1015,7 +1015,7 @@ section,
   padding-bottom: 0.5rem;
   position: relative;
   display: inline-block;
-  background: linear-gradient(90deg, #007bff, #00c6ff);
+  background: linear-gradient(90deg, #8d3372, #273e44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1056,7 +1056,7 @@ section,
 }
 
 .skills .skill-box .progress .progress-bar {
-  background: linear-gradient(90deg, #00c6ff, #007bff);
+  background: linear-gradient(90deg, #3ccaf1, #0f2d4e);
   height: 100%;
   border-radius: 50px;
   transition: width 1s ease-in-out;
