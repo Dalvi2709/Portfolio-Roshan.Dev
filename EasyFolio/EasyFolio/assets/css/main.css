@@ -1391,7 +1391,7 @@ section,
 }
 
 .testimonials .testimonial-item h2 {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -1459,7 +1459,7 @@ section,
   background-color: var(--surface-color);
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color) 10%, transparent);
-  transition: 0.3s;
+  transition: 5;
 }
 
 .testimonials .swiper-button-prev::after,
