@@ -143,9 +143,9 @@ h6 {
 
 .header .header-container {
   background: var(--surface-color);
-  border-radius: 50px;
+  border-radius: 25px;
   padding: 5px 25px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 12px 15px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
@@ -160,29 +160,13 @@ h6 {
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
-  padding-left: 5px;
-  font-weight: 500;
+  padding-left: 10px;
+  font-weight: 750;
   color: var(--heading-color);
 }
 
 .header .header-social-links {
   padding-right: 15px;
-}
-
-.header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding-left: 6px;
-  display: inline-block;
-  transition: 0.3s;
-  font-size: 30px;
-}
-
-.header .header-social-links a:hover {
-  color: var(--accent-color);
-}
-
-.header .header-social-links a i {
-  line-height: 0px;
 }
 
 @media (max-width: 1200px) {
@@ -200,12 +184,8 @@ h6 {
     order: 1;
   }
 
-  .header .header-social-links {
-    order: 2;
-  }
-
   .header .navmenu {
-    order: 3;
+    order: 2;
   }
 }
 
@@ -234,9 +214,9 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -260,62 +240,6 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
-  }
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
   }
 }
 
@@ -396,27 +320,6 @@ h6 {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
   }
 
   .mobile-nav-active {
@@ -658,11 +561,11 @@ section,
 }
 
 .section-title .title-shape {
-  width: 200px;
+  width: 300px;
   height: 20px;
   margin: 0 auto;
   color: var(--accent-color);
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .section-title .title-shape svg {
@@ -691,6 +594,42 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+h3 {
+  color: rgb(199, 101, 101);
+}
+.gradient-name,
+.gradient-role {
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 7s ease infinite;
+}
+
+/* Blue → Purple → Pink gradient for your name */
+.gradient-name {
+  background-image: linear-gradient(90deg, #007bff, #6610f2, #ff00cc, #007bff);
+}
+
+/* Blue → Light Blue → Back to Blue for your role */
+.gradient-role {
+  background-image: linear-gradient(90deg, #007bff, #00cfff, #007bff);
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .hero {
   padding: 80px 0;
   position: relative;
@@ -881,17 +820,22 @@ section,
 }
 
 .about .about-content .lead {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   align-items: center;
   color: black;
+}
+.about .about-content .lead1 {
+  font-size: 1.4rem;
+  align-items: center;
+  color: rgba(58, 12, 226, 0.952);
 }
 
 .about .personal-info {
   margin-top: 2rem;
   padding: 2rem;
-  background-color: rgb(184, 206, 141);
+  background-color: rgba(231, 248, 198, 0.507);
   border-radius: 4rem;
-  border: 2px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.774);
   box-shadow: 0 0 30px rgba(41, 33, 33, 0.05);
 }
 
@@ -919,8 +863,8 @@ section,
 
 .educational-journey h3 {
   font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #191a1b, #202020, #303233);
+  font-weight: 600;
+  background: linear-gradient(90deg, #f1476c, #ce3c3c, #22353f);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -929,8 +873,8 @@ section,
 
 .education-item {
   background: linear-gradient(135deg, #dfd5d5, #f0f8ff);
-  border-left: 8px solid #007BFF;
-  border-right: 8px solid #007BFF;
+  border-left: 8px solid #007bff93;
+  border-right: 8px solid #007bff93;
   transition: all 0.3s ease;
 }
 
@@ -942,11 +886,11 @@ section,
 
 .education-item .college-name {
   font-weight: 500;
-  color: #0096c7;
+  color: #c78800d7;
 }
 
 .education-item p {
-  color: #555;
+  color: #222222;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -990,7 +934,7 @@ section,
 }
 
 .skills .skill-box {
-  background: rgba(8, 221, 54, 0.212);
+  background: rgba(167, 235, 180, 0.253);
   border: 3px solid rgba(3, 3, 3, 0.466);
   padding: 0.8rem;
   border-radius: 20px;
