@@ -73,7 +73,8 @@
               <br>
               <span class="gradient-role">Software Developer</span>
             </h2>
-            <p class="lead" style="color: black; font: 700">I specialize in building modern, user-friendly web applications using the latest
+            <p class="lead" style="color: black; font: 700">I specialize in building modern, user-friendly web
+              applications using the latest
               technologies, with a passion for creating efficient and scalable solutions.</p>
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="500">
               <a href="assets/files/my_resume.pdf" download class="btn btn-primary">Resume</a>
@@ -91,8 +92,8 @@
         </div>
       </div>
     </section><!-- /Hero Section -->
-  
-  
+
+
     <!-- About Section -->
     <section id="about" class="about section light-background">
       <!-- Section Title -->
@@ -139,7 +140,7 @@
                       <span class="value">+91 7588329106</span>
                     </div>
                   </div>
-                  
+
                   <div class="col-6">
                     <div class="info-item">
                       <span class="label">Age :</span>
@@ -178,7 +179,8 @@
             <h4>Higher Secondary school (12<sup>th</sup>)</h4>
             <span class="college-name d-block mb-2">Venna Vidhyamandir and Junior College Medha.</span>
             <p>
-              Completed Higher Secondary Education in Science stream with subjects including Physics, Chemistry, Mathematics, and Biology, developing strong analytical and problem-solving skills.
+              Completed Higher Secondary Education in Science stream with subjects including Physics, Chemistry,
+              Mathematics, and Biology, developing strong analytical and problem-solving skills.
             </p>
           </div>
         </div>
@@ -413,7 +415,8 @@
                 <div class="portfolio-content">
                   <span class="category ">Web Application</span>
                   <h3 class="fw-bold">KheloQuiz – AI Powered Quiz Generation</h3>
-                  <p class="fw-bolder" style="text-align: justify;">An interactive quiz platform built with Django and Google Gemini API that generates quizzes
+                  <p class="fw-bolder" style="text-align: justify;">An interactive quiz platform built with Django and
+                    Google Gemini API that generates quizzes
                     dynamically, manages user responses, and provides performance reports.</p>
                 </div>
               </div>
@@ -429,15 +432,15 @@
                     <div class="portfolio-actions">
                       <a href="assets/img/mini_project/dashboard.png" class="glightbox preview-link"
                         data-gallery="portfolio-gallery-desktop"><i class="bi bi-eye"></i></a>
-                      <a href="project-details-account.html" class="details-link"><i
-                          class="bi bi-arrow-right"></i></a>
+                      <a href="project-details-account.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
                   <span class="category">Desktop Application</span>
                   <h3 class="fw-bold">Account Management System</h3>
-                  <p class="fw-bolder" style="text-align: justify;">A Java-based desktop application for managing user accounts, tracking transactions, and generating
+                  <p class="fw-bolder" style="text-align: justify;">A Java-based desktop application for managing user
+                    accounts, tracking transactions, and generating
                     reports with secure authentication and database integration.</p>
                 </div>
               </div>
@@ -463,7 +466,8 @@
               stroke-width="4"></path>
           </svg>
         </div>
-        <p style="color: rgba(2, 2, 32, 0.774); font-weight:bolder">Milestones and recognitions that showcase my skills, dedication, and accomplishments.</p>
+        <p style="color: rgba(2, 2, 32, 0.774); font-weight:bolder">Milestones and recognitions that showcase my skills,
+          dedication, and accomplishments.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -637,7 +641,7 @@
       </div>
 
     </section><!-- /Achievements Section -->
-    
+
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
 
@@ -671,14 +675,18 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-6">
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form  action="https://formsubmit.co/roshandalvi16@gmail.com"  method="post" class="php-email-form">
-                  <div class="row gy-4">
+                <!-- Contact Form -->
+                <form id="contactForm" action="https://formsubmit.co/ajax/roshandalvi16@gmail.com" method="POST">
+                  <!-- Hidden Inputs -->
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_subject" value="New Contact Form Submission!">
+                  <input type="hidden" name="_template" value="table">
 
+                  <div class="row gy-4">
                     <div class="col-12">
                       <input type="text" name="name" class="form-control"
                         placeholder="We want to know what to call you!" required>
@@ -700,18 +708,23 @@
                     </div>
 
                     <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
                       <button type="submit" class="btn btn-submit w-100">Submit Message</button>
                     </div>
-
                   </div>
                 </form>
               </div>
             </div>
           </div>
+
+          <!-- Thank You Popup -->
+          <div id="thankYouPopup" class="popup">
+            <div class="popup-content">
+              <h3>🎉 Thank You!</h3>
+              <p>Your message has been sent successfully. I’ll get back to you soon!</p>
+              <button onclick="closePopup()" class="btn btn-submit">Close</button>
+            </div>
+          </div>
+
 
         </div>
 
@@ -726,7 +739,8 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">RoshanPortfolio</strong> <span>All Rights Reserved</span>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">RoshanPortfolio</strong> <span>All Rights
+            Reserved</span>
         </p>
       </div>
       <div class="social-links d-flex justify-content-center">

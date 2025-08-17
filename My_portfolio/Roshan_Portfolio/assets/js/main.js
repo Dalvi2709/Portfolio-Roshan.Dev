@@ -220,3 +220,35 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+ /**
+   * contact
+   */
+
+ const form = document.getElementById("contactForm");
+ const popup = document.getElementById("thankYouPopup");
+
+ form.addEventListener("submit", async function(e) {
+   e.preventDefault(); // stop normal submit
+
+   const formData = new FormData(form);
+
+   try {
+     await fetch(form.action, {
+       method: "POST",
+       body: formData
+     });
+
+     form.reset(); // clear form
+     popup.style.display = "flex"; // show popup
+   } catch (error) {
+     alert("Something went wrong. Please try again.");
+   }
+ });
+
+ function closePopup() {
+   popup.style.display = "none";
+ }
+
+
+
